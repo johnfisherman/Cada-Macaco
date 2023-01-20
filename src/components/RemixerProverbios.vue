@@ -12,7 +12,21 @@
           }
         "
       >
-        Anterior
+        <svg
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m4 16 8-8 8 8"
+            stroke="#000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
       </button>
       <h3>{{ primeirasPartes[index1] }}</h3>
       <button
@@ -23,7 +37,21 @@
           }
         "
       >
-        Próxima
+        <svg
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m4 8 8 8 8-8"
+            stroke="#000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
       </button>
     </div>
     <div id="segundas-partes" class="partes-de-proverbio">
@@ -35,7 +63,21 @@
           }
         "
       >
-        Anterior
+        <svg
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m4 16 8-8 8 8"
+            stroke="#000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
       </button>
       <h3>{{ segundasPartes[index2] }}</h3>
       <button
@@ -46,7 +88,21 @@
           }
         "
       >
-        Próxima
+        <svg
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m4 8 8 8 8-8"
+            stroke="#000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
       </button>
     </div>
   </div>
