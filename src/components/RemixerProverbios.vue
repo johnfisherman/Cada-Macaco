@@ -1,55 +1,54 @@
 <template>
+  <h1>
+    Remix de {{ primeirasPartes.length }} Provérbios Populares Portugueses (PPP)
+  </h1>
   <div class="remixer-proverbios">
-    <h1>
-      Remix de {{ primeirasPartes.length }} Provérbios Populares Portugueses
-      (PPP)
-    </h1>
-    <button
-      class="button"
-      v-on:click="
-        if (index1 > 0) {
-          index1--;
-        }
-      "
-    >
-      Anterior
-    </button>
-    <h1>{{ primeirasPartes[index1] }}</h1>
-    <button
-      class="button"
-      v-on:click="
-        if (index1 < primeirasPartes.length - 1) {
-          index1++;
-        }
-      "
-    >
-      Próxima
-    </button>
-
-    <br />
-    <br />
-    <br />
-    <button
-      class="button"
-      v-on:click="
-        if (index2 > 0) {
-          index2--;
-        }
-      "
-    >
-      Anterior
-    </button>
-    <h1>{{ segundasPartes[index2] }}</h1>
-    <button
-      class="button"
-      v-on:click="
-        if (index2 < segundasPartes.length - 1) {
-          index2++;
-        }
-      "
-    >
-      Próxima
-    </button>
+    <div id="primeiras-partes" class="partes-de-proverbio">
+      <button
+        class="button"
+        v-on:click="
+          if (index1 > 0) {
+            index1--;
+          }
+        "
+      >
+        Anterior
+      </button>
+      <h3>{{ primeirasPartes[index1] }}</h3>
+      <button
+        class="button"
+        v-on:click="
+          if (index1 < primeirasPartes.length - 1) {
+            index1++;
+          }
+        "
+      >
+        Próxima
+      </button>
+    </div>
+    <div id="segundas-partes" class="partes-de-proverbio">
+      <button
+        class="button"
+        v-on:click="
+          if (index2 > 0) {
+            index2--;
+          }
+        "
+      >
+        Anterior
+      </button>
+      <h3>{{ segundasPartes[index2] }}</h3>
+      <button
+        class="button"
+        v-on:click="
+          if (index2 < segundasPartes.length - 1) {
+            index2++;
+          }
+        "
+      >
+        Próxima
+      </button>
+    </div>
   </div>
 </template>
 
@@ -112,8 +111,41 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+h1 {
+  margin: 20px 0 80px 0;
+}
+.remixer-proverbios {
+  /* border: 1px solid hotpink !important; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#primeiras-partes {
+  /* border: 1px solid black !important; */
+}
+#segundas-partes {
+  /* border: 1px solid palegreen !important; */
+}
+@media only screen and (min-width: 800px) {
+  h3 {
+    font-size: 1.5em;
+  }
+  .remixer-proverbios {
+    flex-direction: row;
+  }
+  .partes-de-proverbio {
+    width: 40%;
+  }
+  #primeiras-partes {
+    /* border: 1px solid black !important; */
+    padding-right: 10px;
+    text-align: right;
+  }
+  #segundas-partes {
+    /* border: 1px solid palegreen !important; */
+    padding-left: 10px;
+    text-align: left;
+  }
 }
 ul {
   list-style-type: none;
