@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <PrimeiraParte />
+    <RemixerProverbios />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import PrimeiraParte from "@/components/PrimeiraParte.vue";
+import RemixerProverbios from "@/components/RemixerProverbios.vue";
 
 export default {
   name: "HomeView",
   components: {
-    PrimeiraParte,
+    RemixerProverbios,
   },
 };
 </script>

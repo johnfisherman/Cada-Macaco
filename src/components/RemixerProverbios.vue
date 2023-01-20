@@ -1,5 +1,9 @@
 <template>
-  <div class="primeira-parte">
+  <div class="remixer-proverbios">
+    <h1>
+      Remix de {{ primeirasPartes.length }} Provérbios Populares Portugueses
+      (PPP)
+    </h1>
     <button
       class="button"
       v-on:click="
@@ -51,7 +55,7 @@
 
 <script>
 export default {
-  name: "PrimeiraParte",
+  name: "RemixerProverbios",
   data() {
     return {
       primeirasPartes: [
@@ -63,6 +67,18 @@ export default {
         "Quem espera",
         "Quando a esmola é muita",
         "Cada macaco",
+        "Há mais marés",
+        "Quem dá e tira",
+        "Em terra de cegos",
+        "Casa de ferreiro",
+        "Quem vai ao mar",
+        "Quem muito dorme",
+        "Mais vale andar no mar alto",
+        "Quem boa cama faz",
+        "A árvore caída",
+        "Homem prevenido",
+        "Quem desdenha",
+        "Longe da vista",
       ],
       segundasPartes: [
         "não movem moinhos.",
@@ -71,8 +87,18 @@ export default {
         "à casa torna.",
         "mais devagar.",
         "desespera.",
-        "à casa torna.",
+        "o pobre desconfia.",
         "no seu galho.",
+        "que marinheiros.",
+        "para o inferno gira.",
+        "quem tem um olho é rei.",
+        "espeto de pau.",
+        "avia-se em terra.",
+        "pouco aprende.",
+        "do que nas bocas do mundo.",
+        "nela se deita.",
+        "vale por dois.",
+        "longe do coração.",
       ],
       index1: 0,
       index2: 0,
