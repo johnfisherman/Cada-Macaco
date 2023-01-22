@@ -6,9 +6,10 @@
     <div id="primeiras-partes" class="partes-de-proverbio">
       <button
         class="button"
+        v-show="isFirstUpButtonVisible"
         v-on:click="
-          if (index1 > 0) {
-            index1--;
+          if (index1 < primeirasPartes.length - 1) {
+            index1++;
           }
         "
       >
@@ -31,9 +32,10 @@
       <h3>{{ primeirasPartes[index1] }}</h3>
       <button
         class="button"
+        v-show="isFirstDownButtonVisible"
         v-on:click="
-          if (index1 < primeirasPartes.length - 1) {
-            index1++;
+          if (index1 > 0) {
+            index1--;
           }
         "
       >
@@ -57,9 +59,10 @@
     <div id="segundas-partes" class="partes-de-proverbio">
       <button
         class="button"
+        v-show="isSecondUpButtonVisible"
         v-on:click="
-          if (index2 > 0) {
-            index2--;
+          if (index2 < segundasPartes.length - 1) {
+            index2++;
           }
         "
       >
@@ -82,9 +85,10 @@
       <h3>{{ segundasPartes[index2] }}</h3>
       <button
         class="button"
+        v-show="isSecondDownButtonVisible"
         v-on:click="
-          if (index2 < segundasPartes.length - 1) {
-            index2++;
+          if (index2 > 0) {
+            index2--;
           }
         "
       >
@@ -161,6 +165,20 @@ export default {
   },
   props: {
     msg: String,
+  },
+  computed: {
+    isFirstUpButtonVisible() {
+      return this.index1 < this.primeirasPartes.length - 1;
+    },
+    isFirstDownButtonVisible() {
+      return this.index1 > 0;
+    },
+    isSecondUpButtonVisible() {
+      return this.index2 < this.segundasPartes.length - 1;
+    },
+    isSecondDownButtonVisible() {
+      return this.index2 > 0;
+    },
   },
 };
 </script>
