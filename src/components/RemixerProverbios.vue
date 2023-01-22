@@ -6,7 +6,7 @@
     <div id="primeiras-partes" class="partes-de-proverbio">
       <button
         class="button"
-        v-show="isFirstUpButtonVisible"
+        :class="{ active: isFirstUpButtonVisible }"
         v-on:click="
           if (index1 < primeirasPartes.length - 1) {
             index1++;
@@ -32,7 +32,7 @@
       <h3>{{ primeirasPartes[index1] }}</h3>
       <button
         class="button"
-        v-show="isFirstDownButtonVisible"
+        :class="{ active: isFirstDownButtonVisible }"
         v-on:click="
           if (index1 > 0) {
             index1--;
@@ -59,7 +59,7 @@
     <div id="segundas-partes" class="partes-de-proverbio">
       <button
         class="button"
-        v-show="isSecondUpButtonVisible"
+        :class="{ active: isSecondUpButtonVisible }"
         v-on:click="
           if (index2 < segundasPartes.length - 1) {
             index2++;
@@ -85,7 +85,7 @@
       <h3>{{ segundasPartes[index2] }}</h3>
       <button
         class="button"
-        v-show="isSecondDownButtonVisible"
+        :class="{ active: isSecondDownButtonVisible }"
         v-on:click="
           if (index2 > 0) {
             index2--;
@@ -199,6 +199,12 @@ h1 {
 }
 #segundas-partes {
   /* border: 1px solid palegreen !important; */
+}
+button {
+  visibility: hidden;
+}
+button.active {
+  visibility: visible;
 }
 @media only screen and (min-width: 800px) {
   h3 {
