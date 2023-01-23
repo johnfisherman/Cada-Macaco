@@ -28,20 +28,4 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
-button {
-  background: none;
-  border: none;
-  border: 1px solid #4e4e4e;
-  width: 60px;
-  margin: 0px 40px;
-  border-radius: 4px;
-}
-button:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-  transition: all ease-in-out 0.1s;
-}
-button:active {
-  background-color: #dedede;
-}
 </style>

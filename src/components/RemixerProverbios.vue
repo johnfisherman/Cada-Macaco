@@ -110,6 +110,15 @@
       </button>
     </div>
   </div>
+  <div class="proverbios-shuffle">
+    <button
+      id="proverbios-shuffle-button"
+      class="active"
+      v-on:click="shuffleProverbios()"
+    >
+      Dá aí uma ideia!
+    </button>
+  </div>
 </template>
 
 <script>
@@ -180,6 +189,13 @@ export default {
       return this.index2 > 0;
     },
   },
+  methods: {
+    shuffleProverbios() {
+      this.index1 = Math.floor(Math.random() * this.primeirasPartes.length);
+      this.index2 = Math.floor(Math.random() * this.segundasPartes.length);
+      return true;
+    },
+  },
 };
 </script>
 
@@ -193,6 +209,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 40px;
 }
 #primeiras-partes {
   /* border: 1px solid black !important; */
@@ -202,9 +219,28 @@ h1 {
 }
 button {
   visibility: hidden;
+  background: none;
+  border: none;
+  border: 1px solid #4e4e4e;
+  width: 60px;
+  margin: 0px 40px;
+  border-radius: 4px;
 }
 button.active {
   visibility: visible;
+}
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+button:active {
+  background-color: #dedede;
+}
+button#proverbios-shuffle-button {
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 @media only screen and (min-width: 800px) {
   h3 {
@@ -218,12 +254,12 @@ button.active {
   }
   #primeiras-partes {
     /* border: 1px solid black !important; */
-    padding-right: 10px;
+    padding-right: 5px;
     text-align: right;
   }
   #segundas-partes {
     /* border: 1px solid palegreen !important; */
-    padding-left: 10px;
+    padding-left: 5px;
     text-align: left;
   }
 }
