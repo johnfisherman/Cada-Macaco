@@ -10,6 +10,7 @@
         v-on:click="
           if (index1 < primeirasPartes.length - 1) {
             index1++;
+            interactions++;
           }
         "
       >
@@ -36,6 +37,7 @@
         v-on:click="
           if (index1 > 0) {
             index1--;
+            interactions++;
           }
         "
       >
@@ -63,6 +65,7 @@
         v-on:click="
           if (index2 < segundasPartes.length - 1) {
             index2++;
+            interactions++;
           }
         "
       >
@@ -89,6 +92,7 @@
         v-on:click="
           if (index2 > 0) {
             index2--;
+            interactions++;
           }
         "
       >
@@ -110,7 +114,7 @@
       </button>
     </div>
   </div>
-  <div class="proverbios-shuffle">
+  <div class="proverbios-shuffle" v-show="interactions > suggestionNeeded">
     <button
       id="proverbios-shuffle-button"
       class="active"
@@ -170,6 +174,9 @@ export default {
       ],
       index1: 0,
       index2: 0,
+      interactions: 0,
+      // After this number of interactions the visitor might need a nudge, some ideas
+      suggestionNeeded: 10,
     };
   },
   props: {
