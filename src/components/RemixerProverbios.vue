@@ -123,6 +123,9 @@
       Dá aí uma ideia!
     </button>
   </div>
+  <section class="flex items-center justify-center p-8">
+    <img :src="generated()" v-if="poster" class="md:max-w-md" />
+  </section>
 </template>
 
 <script>
@@ -155,6 +158,7 @@ export default {
         "Para trás",
         "Burro gabado",
         "Depressa e bem",
+        "O que não tem remédio",
       ],
       segundasPartes: [
         "não movem moinhos.",
@@ -181,12 +185,14 @@ export default {
         "mija a burra.",
         "é burro estragado.",
         "há pouco quem.",
+        "remediado está.",
       ],
       index1: 0,
       index2: 0,
       interactions: 0,
       // After this number of interactions the visitor might need a nudge, some ideas
       suggestionNeeded: 10,
+      poster: null,
     };
   },
   props: {
@@ -212,6 +218,62 @@ export default {
       this.index2 = Math.floor(Math.random() * this.segundasPartes.length);
       return true;
     },
+    loadImage(url) {
+      return new Promise((resolve) => {
+        // console.log("Loading image...");
+        let img = new Image();
+        img.onload = () => {
+          resolve(img);
+        };
+        img.crossOrigin = "Anonymous";
+        img.src = url;
+      });
+    },
+    loadFont() {
+      return new Promise((resolve) => {
+        let font = new FontFace(
+          "SF Movie Poster",
+          `url(https://assets.codepen.io/141041/sf-movie-poster-webfont.woff)`
+        );
+        font
+          .load()
+          .then((face) => {
+            document.fonts.add(face);
+            resolve();
+          })
+          .catch();
+      });
+    },
+    generated() {
+      // console.log("Generating image...");
+
+      let canvas = document.createElement("canvas");
+      canvas.height = 1332;
+      canvas.width = 888;
+      let context = canvas.getContext("2d");
+      let ppp = this.poster;
+      // console.log(ppp instanceof HTMLImageElement);
+
+      context.drawImage(ppp, 0, 0);
+      context.font = "96px SF Movie Poster";
+      context.textAlign = "center";
+      context.textBaseline = "top";
+      context.fillText(
+        this.primeirasPartes[this.index1] +
+          " " +
+          this.segundasPartes[this.index2],
+        444,
+        1028
+      );
+      return canvas.toDataURL("image/jpeg");
+    },
+  },
+  async created() {
+    // console.log("The component is now created.");
+    await this.loadFont();
+    this.poster = await this.loadImage(
+      "https://assets.codepen.io/141041/poster.jpg"
+    );
   },
 };
 </script>
