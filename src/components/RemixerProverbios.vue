@@ -151,6 +151,7 @@ export default {
   data() {
     return {
       primeirasPartes: [
+        "Cada macaco",
         "Mais vale andar no mar alto",
         "Águas passadas",
         "Grão a grão",
@@ -160,7 +161,6 @@ export default {
         "Quanto mais depressa",
         "Quem espera",
         "Quando a esmola é muita",
-        "Cada macaco",
         "Há mais marés",
         "Quem dá e tira",
         "Em terra de cegos",
@@ -179,6 +179,7 @@ export default {
         "Água mole em pedra dura",
       ],
       segundasPartes: [
+        "no seu galho.",
         "do que nas bocas do mundo.",
         "não movem moinhos.",
         "enche a galinha o papo.",
@@ -188,7 +189,6 @@ export default {
         "mais devagar.",
         "desespera.",
         "o pobre desconfia.",
-        "no seu galho.",
         "que marinheiros.",
         "para o inferno gira.",
         "quem tem um olho é rei.",
@@ -251,7 +251,7 @@ export default {
     },
     loadFont() {
       return new Promise((resolve) => {
-        let font = new FontFace("Alegreya SC", `url(AlegreyaSC-Regular.ttf)`);
+        let font = new FontFace("Castoro", `url(Castoro-Regular.ttf)`);
         font
           .load()
           .then((face) => {
@@ -262,17 +262,15 @@ export default {
       });
     },
     generated() {
-      // console.log("Generating image...");
-
       let canvas = document.createElement("canvas");
       canvas.width = 1332;
       canvas.height = 888;
       let context = canvas.getContext("2d");
-      let ppp = this.poster;
-      // console.log(ppp instanceof HTMLImageElement);
+      let poster = this.poster;
+      // console.log(poster instanceof HTMLImageElement);
 
-      context.drawImage(ppp, 0, 0);
-      context.font = "56px Alegreya SC";
+      context.drawImage(poster, 0, 0);
+      context.font = "56px Castoro";
       context.textAlign = "center";
       context.textBaseline = "top";
       context.fillText(
@@ -282,6 +280,8 @@ export default {
         650,
         380
       );
+      context.font = "36px Castoro";
+      context.fillText("criado em https://cadamaca.co", 650, 800);
       return canvas.toDataURL("image/jpeg");
     },
   },
@@ -378,7 +378,7 @@ button#sharing-button {
     width: 40%;
   }
   .partes-de-proverbio h3 {
-    font-size: 0.7em;
+    font-size: 1em;
   }
   #primeiras-partes {
     /* border: 1px solid black !important; */
@@ -396,25 +396,25 @@ button#sharing-button {
 }
 @media only screen and (min-width: 1100px) {
   .partes-de-proverbio h3 {
-    font-size: 0.9em;
+    font-size: 1.4em;
     /* border: 1px solid teal !important; */
   }
 }
 @media only screen and (min-width: 1200px) {
   .partes-de-proverbio h3 {
-    font-size: 1em;
+    font-size: 1.5em;
     /* border: 1px solid lightcoral !important; */
   }
 }
 @media only screen and (min-width: 1300px) {
   .partes-de-proverbio h3 {
-    font-size: 1.1em;
+    font-size: 1.6em;
     /* border: 1px solid hotpink !important; */
   }
 }
 @media only screen and (min-width: 1400px) {
   .partes-de-proverbio h3 {
-    font-size: 1.2em;
+    font-size: 1.7em;
     /* border: 1px solid greenyellow !important; */
   }
 }
@@ -437,5 +437,6 @@ footer {
 .partes-de-proverbio {
   font-family: "Libre Baskerville", Georgia, serif;
   font-family: "Alegreya SC", Georgia, serif;
+  font-family: "Castoro", Georgia, serif;
 }
 </style>

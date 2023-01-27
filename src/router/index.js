@@ -16,6 +16,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
+  {
+    path: "/como-assim",
+    name: "como assim",
+    component: () =>
+      import(/* webpackChunkName: "como assim" */ "../views/ComoAssimView.vue"),
+  },
 ];
 
 const router = createRouter({
