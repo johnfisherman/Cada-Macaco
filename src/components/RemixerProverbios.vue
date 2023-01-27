@@ -1,5 +1,4 @@
 <template>
-  <h5>{{ primeirasPartes.length }} Provérbios Populares Portugueses (PPP)</h5>
   <section class="remixer-proverbios">
     <div id="primeiras-partes" class="partes-de-proverbio">
       <button
@@ -131,10 +130,19 @@
       Já sei quem vai gostar disto!
     </button>
     <div :class="{ active: isSharingContentActive }" id="sharing-content">
+      <h4>Partilha esta imagem</h4>
       <img :src="generated()" v-if="poster" class="md:max-w-md" />
       <p>Botão direito > Gravar como (ou Download)</p>
     </div>
   </section>
+  <footer>
+    <p>
+      Cães ladram permite fazer um total
+      {{ primeirasPartes.length * primeirasPartes.length }} de combinações a
+      partir de {{ primeirasPartes.length }} Provérbios Populares Portugueses
+      (PPP) seleccionados a dedo.
+    </p>
+  </footer>
 </template>
 
 <script>
@@ -143,6 +151,7 @@ export default {
   data() {
     return {
       primeirasPartes: [
+        "Mais vale andar no mar alto",
         "Águas passadas",
         "Grão a grão",
         "Os cães ladram",
@@ -158,7 +167,6 @@ export default {
         "Casa de ferreiro",
         "Quem vai ao mar",
         "Quem muito dorme",
-        "Mais vale andar no mar alto",
         "Quem boa cama faz",
         "A árvore caída",
         "Homem prevenido",
@@ -168,8 +176,10 @@ export default {
         "Burro gabado",
         "Depressa e bem",
         "O que não tem remédio",
+        "Água mole em pedra dura",
       ],
       segundasPartes: [
+        "do que nas bocas do mundo.",
         "não movem moinhos.",
         "enche a galinha o papo.",
         "e a caravana passa.",
@@ -185,7 +195,6 @@ export default {
         "espeto de pau.",
         "avia-se em terra.",
         "pouco aprende.",
-        "do que nas bocas do mundo.",
         "nela se deita.",
         "todos vão buscar lenha.",
         "vale por dois.",
@@ -195,6 +204,7 @@ export default {
         "é burro estragado.",
         "há pouco quem.",
         "remediado está.",
+        "tanto dá até que fura.",
       ],
       index1: 0,
       index2: 0,
@@ -241,10 +251,7 @@ export default {
     },
     loadFont() {
       return new Promise((resolve) => {
-        let font = new FontFace(
-          "SF Movie Poster",
-          `url(https://assets.codepen.io/141041/sf-movie-poster-webfont.woff)`
-        );
+        let font = new FontFace("Alegreya SC", `url(AlegreyaSC-Regular.ttf)`);
         font
           .load()
           .then((face) => {
@@ -265,7 +272,7 @@ export default {
       // console.log(ppp instanceof HTMLImageElement);
 
       context.drawImage(ppp, 0, 0);
-      context.font = "96px SF Movie Poster";
+      context.font = "56px Alegreya SC";
       context.textAlign = "center";
       context.textBaseline = "top";
       context.fillText(
@@ -291,12 +298,19 @@ export default {
 h1 {
   margin: 20px 0 80px 0;
 }
+h3 {
+  font-weight: 300;
+}
 .remixer-proverbios {
   /* border: 1px solid hotpink !important; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 80px 0;
   margin-bottom: 40px;
+}
+.partes-de-proverbio {
+  font-size: 1em;
 }
 #primeiras-partes {
   /* border: 1px solid black !important; */
@@ -357,14 +371,14 @@ button#sharing-button {
   visibility: visible;
 }
 @media only screen and (min-width: 800px) {
-  h3 {
-    font-size: 1.5em;
-  }
   .remixer-proverbios {
     flex-direction: row;
   }
   .partes-de-proverbio {
     width: 40%;
+  }
+  .partes-de-proverbio h3 {
+    font-size: 0.7em;
   }
   #primeiras-partes {
     /* border: 1px solid black !important; */
@@ -380,6 +394,30 @@ button#sharing-button {
     max-width: 500px;
   }
 }
+@media only screen and (min-width: 1100px) {
+  .partes-de-proverbio h3 {
+    font-size: 0.9em;
+    /* border: 1px solid teal !important; */
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .partes-de-proverbio h3 {
+    font-size: 1em;
+    /* border: 1px solid lightcoral !important; */
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .partes-de-proverbio h3 {
+    font-size: 1.1em;
+    /* border: 1px solid hotpink !important; */
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .partes-de-proverbio h3 {
+    font-size: 1.2em;
+    /* border: 1px solid greenyellow !important; */
+  }
+}
 ul {
   list-style-type: none;
   padding: 0;
@@ -390,5 +428,14 @@ li {
 }
 a {
   color: #42b983;
+}
+footer {
+  font-size: 1em;
+  color: lightslategray;
+}
+/* Fonts */
+.partes-de-proverbio {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: "Alegreya SC", Georgia, serif;
 }
 </style>
