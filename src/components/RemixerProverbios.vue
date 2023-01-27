@@ -1,8 +1,6 @@
 <template>
-  <h1>
-    Remix de {{ primeirasPartes.length }} Provérbios Populares Portugueses (PPP)
-  </h1>
-  <div class="remixer-proverbios">
+  <h5>{{ primeirasPartes.length }} Provérbios Populares Portugueses (PPP)</h5>
+  <section class="remixer-proverbios">
     <div id="primeiras-partes" class="partes-de-proverbio">
       <button
         class="button"
@@ -113,7 +111,7 @@
         </svg>
       </button>
     </div>
-  </div>
+  </section>
   <div class="proverbios-shuffle" v-show="interactions > suggestionNeeded">
     <button
       id="proverbios-shuffle-button"
@@ -123,8 +121,19 @@
       Dá aí uma ideia!
     </button>
   </div>
-  <section class="flex items-center justify-center p-8">
-    <img :src="generated()" v-if="poster" class="md:max-w-md" />
+  <section class="social-sharing">
+    <button
+      id="sharing-button"
+      class="active"
+      :class="{ pressed: isSharingContentActive }"
+      v-on:click="isSharingContentActive = true"
+    >
+      Já sei quem vai gostar disto!
+    </button>
+    <div :class="{ active: isSharingContentActive }" id="sharing-content">
+      <img :src="generated()" v-if="poster" class="md:max-w-md" />
+      <p>Botão direito > Gravar como (ou Download)</p>
+    </div>
   </section>
 </template>
 
@@ -193,6 +202,7 @@ export default {
       // After this number of interactions the visitor might need a nudge, some ideas
       suggestionNeeded: 10,
       poster: null,
+      isSharingContentActive: false,
     };
   },
   props: {
@@ -248,8 +258,8 @@ export default {
       // console.log("Generating image...");
 
       let canvas = document.createElement("canvas");
-      canvas.height = 1332;
-      canvas.width = 888;
+      canvas.width = 1332;
+      canvas.height = 888;
       let context = canvas.getContext("2d");
       let ppp = this.poster;
       // console.log(ppp instanceof HTMLImageElement);
@@ -262,8 +272,8 @@ export default {
         this.primeirasPartes[this.index1] +
           " " +
           this.segundasPartes[this.index2],
-        444,
-        1028
+        650,
+        380
       );
       return canvas.toDataURL("image/jpeg");
     },
@@ -271,9 +281,7 @@ export default {
   async created() {
     // console.log("The component is now created.");
     await this.loadFont();
-    this.poster = await this.loadImage(
-      "https://assets.codepen.io/141041/poster.jpg"
-    );
+    this.poster = await this.loadImage("card-for-sharing.jpg");
   },
 };
 </script>
@@ -321,6 +329,33 @@ button#proverbios-shuffle-button {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+button#sharing-button {
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.social-sharing {
+  padding-bottom: 120px;
+}
+.social-sharing button {
+  margin-bottom: 40px;
+}
+.social-sharing button.pressed {
+  background-color: #2c3e50;
+  color: white;
+}
+.social-sharing button.pressed:hover {
+  transform: scale(1);
+}
+.social-sharing img {
+  max-width: 100%;
+}
+#sharing-content {
+  visibility: hidden;
+}
+#sharing-content.active {
+  visibility: visible;
+}
 @media only screen and (min-width: 800px) {
   h3 {
     font-size: 1.5em;
@@ -340,6 +375,9 @@ button#proverbios-shuffle-button {
     /* border: 1px solid palegreen !important; */
     padding-left: 5px;
     text-align: left;
+  }
+  .social-sharing img {
+    max-width: 500px;
   }
 }
 ul {
