@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Cada Macaco</router-link> |
-    <router-link to="/about">Contacto</router-link>
+    <router-link to="/about">Contacto</router-link> |
     <router-link to="/como-assim">Como Assim?</router-link>
   </nav>
   <router-view />

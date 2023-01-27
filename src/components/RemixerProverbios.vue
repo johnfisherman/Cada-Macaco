@@ -117,7 +117,7 @@
       class="active"
       v-on:click="shuffleProverbios()"
     >
-      Dá aí uma ideia!
+      🔀 Preciso de uma sugestão!
     </button>
   </div>
   <section class="social-sharing">
@@ -127,7 +127,7 @@
       :class="{ pressed: isSharingContentActive }"
       v-on:click="isSharingContentActive = true"
     >
-      Já sei quem vai gostar disto!
+      💡 Já sei quem vai gostar disto!
     </button>
     <div :class="{ active: isSharingContentActive }" id="sharing-content">
       <h4>Partilha esta imagem</h4>
@@ -136,6 +136,18 @@
     </div>
   </section>
   <footer>
+    <p>
+      Uma experiência linguística de
+      <a href="https://fredrocha.net">Fred Rocha</a> com a inspiração de
+      <a href="https://madalenamarques.com" target="_blank">Madalena Marques</a
+      >.
+      <a
+        href="https://github.com/johnfisherman/os-caes-ladram-no-seu-galho"
+        target="_blank"
+        >Código aberto</a
+      >
+      aberto a remixes e novas línguas.
+    </p>
     <p>
       Cães ladram permite fazer um total
       {{ primeirasPartes.length * primeirasPartes.length }} de combinações a
@@ -306,7 +318,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0;
+  padding: 80px 0 0 0;
   margin-bottom: 40px;
 }
 .partes-de-proverbio {
@@ -339,24 +351,28 @@ button:active {
   background-color: #dedede;
 }
 button#proverbios-shuffle-button {
-  width: 200px;
+  width: 300px;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-size: 0.7em;
+  margin-bottom: 20px;
 }
 button#sharing-button {
-  width: 200px;
+  width: 300px;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-size: 0.7em;
 }
 .social-sharing {
   padding-bottom: 120px;
 }
 .social-sharing button {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .social-sharing button.pressed {
   background-color: #2c3e50;
   color: white;
+  cursor: default;
 }
 .social-sharing button.pressed:hover {
   transform: scale(1);
