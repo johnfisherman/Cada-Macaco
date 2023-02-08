@@ -493,10 +493,11 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #554994;
 }
 footer {
-  font-size: 1em;
-  color: lightslategray;
+  font-size: 0.8em;
+  padding: 20px;
+  background-color: var(--tertiary-color);
 }
 </style>

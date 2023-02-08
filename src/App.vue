@@ -44,6 +44,10 @@ body {
   font-size: var(--global-font-size);
 }
 
+a {
+  color: red;
+}
+
 nav {
   max-width: 1200px;
   margin: 0 auto;
