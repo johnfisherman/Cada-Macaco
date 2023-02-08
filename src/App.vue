@@ -9,7 +9,7 @@
       /></router-link>
     </div>
     <div class="navigation-items">
-      <router-link to="/about">Contacto</router-link>
+      <router-link to="/contacto">Contacto</router-link>
       <router-link to="/como-assim">Como Assim?</router-link>
     </div>
   </nav>

@@ -509,7 +509,7 @@ a {
   color: #554994;
 }
 footer {
-  font-size: 0.8em;
+  font-size: 0.7em;
   padding: 20px 40px;
   background-color: var(--tertiary-color);
 }
