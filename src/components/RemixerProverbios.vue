@@ -354,6 +354,9 @@ h3 {
   font-size: 1em;
   font-family: var(--serifed-font-family);
 }
+.partes-de-proverbio button {
+  background-color: var(--accent-color);
+}
 #primeiras-partes {
   /* border: 1px solid black !important; */
 }

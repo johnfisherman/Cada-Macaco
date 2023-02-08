@@ -2,7 +2,12 @@
     /* Colors */
     --main-font-color: #262626;
     --active-link-color: #42b983;
-    --global-font-size: 24px;
+    --brand-color: #594545;
+    --secondary-color: #93BFCF;
+    --tertiary-color: #BDCDD6;
+    --quadri-color: #EEE9DA;
+    --accent-color: #FD8A8A;
+    
     /* UI */
     --active-button-bg-color: #dedede;
 
@@ -11,4 +16,6 @@
     --serifed-font-family: "Libre Baskerville", Georgia, serif;
     --serifed-font-family: "Alegreya SC", Georgia, serif;
     --serifed-font-family: "Castoro", Arial, sans-serif;
+    --global-font-size: 24px;
+
   }
