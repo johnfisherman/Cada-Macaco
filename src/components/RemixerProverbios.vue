@@ -149,7 +149,7 @@
       aberto a remixes e novas línguas.
     </p>
     <p>
-      Cães ladram permite fazer um total
+      Cada Macaco permite fazer um total
       {{ primeirasPartes.length * primeirasPartes.length }} de combinações a
       partir de {{ primeirasPartes.length }} Provérbios Populares Portugueses
       (PPP) seleccionados a dedo.
@@ -204,6 +204,8 @@ export default {
         "Casa roubada",
         "Não sirvas a quem serviu",
         "Roma e Pavia",
+        "O barato",
+        "Para bom entendedor",
       ],
       segundasPartes: [
         "todos ralham ninguém tem razão.",
@@ -238,6 +240,8 @@ export default {
         "trancas à porta.",
         "nem peças a quem pediu.",
         "não foram feitas num dia.",
+        "sai caro",
+        "meia palavra basta.",
       ],
       index1: 0,
       index2: 0,
@@ -497,7 +501,10 @@ a {
 }
 footer {
   font-size: 0.8em;
-  padding: 20px;
+  padding: 20px 40px;
   background-color: var(--tertiary-color);
+}
+footer a:hover {
+  font-style: italic;
 }
 </style>
