@@ -149,10 +149,19 @@
       aberto a remixes e novas línguas.
     </p>
     <p>
-      Cada Macaco permite fazer um total
-      {{ primeirasPartes.length * primeirasPartes.length }} de combinações a
-      partir de {{ primeirasPartes.length }} Provérbios Populares Portugueses
-      (PPP) seleccionados a dedo.
+      Cada Macaco permite fazer um total de
+      <strong
+        >{{
+          primeirasPartes.length * primeirasPartes.length
+        }}
+        combinações</strong
+      >
+      partir de
+      <strong
+        >{{ primeirasPartes.length }} Provérbios Populares Portugueses
+        (PPP)</strong
+      >
+      seleccionados a dedo.
     </p>
     <p>
       Logo e ícone por
@@ -435,10 +444,10 @@ button#sharing-button.pressed:hover {
   max-width: 100%;
 }
 #sharing-content {
-  visibility: hidden;
+  display: none;
 }
 #sharing-content.active {
-  visibility: visible;
+  display: block;
 }
 @media only screen and (min-width: 800px) {
   .remixer-proverbios {
