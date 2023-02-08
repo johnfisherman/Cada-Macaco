@@ -130,7 +130,7 @@
       🎲 Dá-me um provérbio à sorte!
     </button>
     <div :class="{ active: isSharingContentActive }" id="sharing-content">
-      <h4>Partilha esta imagem</h4>
+      <h4>Quem partilha o que tem a mais não é obrigado 👇🏽</h4>
       <img :src="generated()" v-if="poster" class="md:max-w-md" />
       <p>Botão direito > Gravar como (ou "Download")</p>
     </div>
