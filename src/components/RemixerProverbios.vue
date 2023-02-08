@@ -111,15 +111,6 @@
       </button>
     </div>
   </section>
-  <div class="proverbios-shuffle" v-show="interactions > suggestionNeeded">
-    <button
-      id="proverbios-shuffle-button"
-      class="active"
-      v-on:click="shuffleProverbios()"
-    >
-      🔀 Preciso de uma sugestão!
-    </button>
-  </div>
   <section class="social-sharing">
     <button
       id="sharing-button"
@@ -129,10 +120,17 @@
     >
       💡 Já sei quem vai gostar disto!
     </button>
+    <button
+      id="proverbios-shuffle-button"
+      :class="{ active: isShuffleButtonActive }"
+      v-on:click="shuffleProverbios()"
+    >
+      🎲 Dá-me um provérbio à sorte!
+    </button>
     <div :class="{ active: isSharingContentActive }" id="sharing-content">
       <h4>Partilha esta imagem</h4>
       <img :src="generated()" v-if="poster" class="md:max-w-md" />
-      <p>Botão direito > Gravar como (ou Download)</p>
+      <p>Botão direito > Gravar como (ou "Download")</p>
     </div>
   </section>
   <footer>
@@ -163,8 +161,9 @@ export default {
   data() {
     return {
       primeirasPartes: [
-        "Cada macaco",
+        "Casa onde não há pão",
         "Mais vale andar no mar alto",
+        "Cada macaco",
         "Águas passadas",
         "Grão a grão",
         "Os cães ladram",
@@ -180,7 +179,6 @@ export default {
         "Quem vai ao mar",
         "Quem muito dorme",
         "Quem boa cama faz",
-        "Casa onde não há pão",
         "A árvore caída",
         "Homem prevenido",
         "Quem desdenha",
@@ -194,10 +192,12 @@ export default {
         "Quem quer bolota",
         "Casa roubada",
         "Não sirvas a quem serviu",
+        "Roma e Pavia",
       ],
       segundasPartes: [
-        "no seu galho.",
+        "todos ralham ninguém tem razão.",
         "do que nas bocas do mundo.",
+        "no seu galho.",
         "não movem moinhos.",
         "enche a galinha o papo.",
         "e a caravana passa.",
@@ -213,7 +213,6 @@ export default {
         "avia-se em terra.",
         "pouco aprende.",
         "nela se deita.",
-        "todos ralham ninguém tem razão.",
         "todos vão buscar lenha.",
         "vale por dois.",
         "quer comprar.",
@@ -227,12 +226,13 @@ export default {
         "trepa à arvore.",
         "trancas à porta.",
         "nem peças a quem pediu.",
+        "não foram feitas num dia.",
       ],
       index1: 0,
       index2: 0,
       interactions: 0,
       // After this number of interactions the visitor might need a nudge, some ideas
-      suggestionNeeded: 10,
+      suggestionNeeded: 2,
       poster: null,
       isSharingContentActive: false,
     };
@@ -252,6 +252,9 @@ export default {
     },
     isSecondDownButtonVisible() {
       return this.index2 > 0;
+    },
+    isShuffleButtonActive() {
+      return this.interactions > this.suggestionNeeded;
     },
   },
   methods: {
@@ -273,7 +276,7 @@ export default {
     },
     loadFont() {
       return new Promise((resolve) => {
-        let font = new FontFace("Castoro", `url(Castoro-Regular.ttf)`);
+        let font = new FontFace("Castoro", `url(fonts/Castoro-Regular.ttf)`);
         font
           .load()
           .then((face) => {
@@ -330,9 +333,12 @@ h3 {
   justify-content: center;
   padding: 80px 0 0 0;
   margin-bottom: 40px;
+  font-size: 22px;
+  color: var(--main-font-color);
 }
 .partes-de-proverbio {
   font-size: 1em;
+  font-family: var(--serifed-font-family);
 }
 #primeiras-partes {
   /* border: 1px solid black !important; */
@@ -352,13 +358,13 @@ button {
 button.active {
   visibility: visible;
 }
-button:hover {
+button.active:hover {
   transform: scale(1.1);
   cursor: pointer;
   transition: all ease-in-out 0.1s;
 }
 button:active {
-  background-color: #dedede;
+  background-color: var(--active-button-bg-color);
 }
 button#proverbios-shuffle-button {
   width: 300px;
@@ -366,6 +372,15 @@ button#proverbios-shuffle-button {
   padding-bottom: 10px;
   font-size: 0.7em;
   margin-bottom: 20px;
+  visibility: visible;
+  border: 1px solid #c6c6c6;
+  color: #c6c6c6;
+  opacity: 0.5;
+}
+button#proverbios-shuffle-button.active {
+  border: 1px solid #4e4e4e;
+  color: var(--main-font-color);
+  opacity: 1;
 }
 button#sharing-button {
   width: 300px;
@@ -458,11 +473,5 @@ a {
 footer {
   font-size: 1em;
   color: lightslategray;
-}
-/* Fonts */
-.partes-de-proverbio {
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-family: "Alegreya SC", Georgia, serif;
-  font-family: "Castoro", Georgia, serif;
 }
 </style>

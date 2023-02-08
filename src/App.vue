@@ -8,13 +8,26 @@
 </template>
 
 <style>
+@import "assets/styles/variables.css";
+
+@font-face {
+  font-family: "Castoro";
+  src: local("Castoro"),
+    url("../public/fonts/Castoro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alegreya SC";
+  src: local("Alegreya SC"),
+    url("../public/fonts/AlegreyaSC-Regular.ttf") format("truetype");
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--ui-font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  font-size: 24px;
+  font-size: var(--global-font-size);
 }
 
 nav {
@@ -24,9 +37,10 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: var(--active-link-color);
 }
 </style>
