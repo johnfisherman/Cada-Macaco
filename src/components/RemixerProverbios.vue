@@ -114,8 +114,10 @@
   <section class="social-sharing">
     <button
       id="sharing-button"
-      class="active"
-      :class="{ pressed: isSharingContentActive }"
+      :class="{
+        pressed: isSharingContentActive,
+        active: isSharingButtonButtonActive,
+      }"
       v-on:click="isSharingContentActive = true"
     >
       💡 Já sei quem vai gostar disto!
@@ -256,6 +258,9 @@ export default {
     isShuffleButtonActive() {
       return this.interactions > this.suggestionNeeded;
     },
+    isSharingButtonButtonActive() {
+      return this.interactions > 0;
+    },
   },
   methods: {
     shuffleProverbios() {
@@ -387,19 +392,27 @@ button#sharing-button {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 0.7em;
+  visibility: visible;
+  border: 1px solid #c6c6c6;
+  color: #c6c6c6;
+}
+button#sharing-button.active {
+  border: 1px solid #4e4e4e;
+  color: var(--main-font-color);
+  opacity: 1;
 }
 .social-sharing {
   padding-bottom: 120px;
 }
-.social-sharing button {
+button#sharing-button {
   margin-bottom: 20px;
 }
-.social-sharing button.pressed {
+button#sharing-button.pressed {
   background-color: #2c3e50;
   color: white;
   cursor: default;
 }
-.social-sharing button.pressed:hover {
+button#sharing-button.pressed:hover {
   transform: scale(1);
 }
 .social-sharing img {
