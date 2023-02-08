@@ -154,6 +154,15 @@
       partir de {{ primeirasPartes.length }} Provérbios Populares Portugueses
       (PPP) seleccionados a dedo.
     </p>
+    <p>
+      Logo e ícone por
+      <a
+        href="https://www.flaticon.com/authors/freepik"
+        title="muted monkey"
+        target="_blank"
+        >Freepik</a
+      >.
+    </p>
   </footer>
 </template>
 
