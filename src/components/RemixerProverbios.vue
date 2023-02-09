@@ -130,7 +130,11 @@
       🎲 Dá-me um provérbio à sorte!
     </button>
     <div :class="{ active: isSharingContentActive }" id="sharing-content">
-      <h4>Quem partilha o que tem a mais não é obrigado 👇🏽</h4>
+      <h4>Quem partilha o que tem a mais não é obrigado</h4>
+      <p>
+        Esta imagem foi gerada com o teu novo provérbio, pronta a ser
+        partilhada.👇🏽
+      </p>
       <img :src="generated()" v-if="poster" class="md:max-w-md" />
       <p>Botão direito > Gravar como (ou "Download")</p>
     </div>
@@ -181,73 +185,73 @@ export default {
   data() {
     return {
       primeirasPartes: [
-        "Casa onde não há pão",
-        "Mais vale andar no mar alto",
         "Cada macaco",
-        "Águas passadas",
-        "Grão a grão",
         "Os cães ladram",
-        "O hábito",
-        "Bom filho",
-        "Quanto mais depressa",
-        "Quem espera",
-        "Quando a esmola é muita",
-        "Há mais marés",
-        "Quem dá e tira",
+        "Grão a grão",
+        "Águas passadas",
         "Em terra de cegos",
         "Casa de ferreiro",
+        "Água mole em pedra dura",
+        "O hábito",
+        "Não sirvas a quem serviu",
+        "Quanto mais depressa",
+        "Quem espera",
+        "Há mais marés",
+        "Para trás",
+        "Quem desdenha",
+        "Quem dá e tira",
+        "Mais vale andar no mar alto",
+        "Casa onde não há pão",
         "Quem vai ao mar",
         "Quem muito dorme",
         "Quem boa cama faz",
         "A árvore caída",
         "Homem prevenido",
-        "Quem desdenha",
         "Longe da vista",
-        "Para trás",
+        "Bom filho",
         "Burro gabado",
         "Depressa e bem",
+        "Quando a esmola é muita",
         "O que não tem remédio",
-        "Água mole em pedra dura",
         "Quem tem brio",
         "Quem quer bolota",
         "Casa roubada",
-        "Não sirvas a quem serviu",
         "Roma e Pavia",
         "O barato",
         "Para bom entendedor",
       ],
       segundasPartes: [
-        "todos ralham ninguém tem razão.",
-        "do que nas bocas do mundo.",
         "no seu galho.",
-        "não movem moinhos.",
-        "enche a galinha o papo.",
         "e a caravana passa.",
-        "não faz o monge.",
-        "à casa torna.",
-        "mais devagar.",
-        "desespera.",
-        "o pobre desconfia.",
-        "que marinheiros.",
-        "para o inferno gira.",
+        "enche a galinha o papo.",
+        "não movem moinhos.",
         "quem tem um olho é rei.",
         "espeto de pau.",
+        "tanto dá até que fura.",
+        "não faz o monge.",
+        "nem peças a quem pediu.",
+        "mais devagar.",
+        "desespera.",
+        "que marinheiros.",
+        "mija a burra.",
+        "quer comprar.",
+        "para o inferno gira.",
+        "do que nas bocas do mundo.",
+        "todos ralham ninguém tem razão.",
         "avia-se em terra.",
         "pouco aprende.",
         "nela se deita.",
         "todos vão buscar lenha.",
         "vale por dois.",
-        "quer comprar.",
         "longe do coração.",
-        "mija a burra.",
+        "à casa torna.",
         "é burro estragado.",
         "há pouco quem.",
+        "o pobre desconfia.",
         "remediado está.",
-        "tanto dá até que fura.",
         "não tem frio.",
         "trepa à arvore.",
         "trancas à porta.",
-        "nem peças a quem pediu.",
         "não foram feitas num dia.",
         "sai caro",
         "meia palavra basta.",
@@ -256,7 +260,7 @@ export default {
       index2: 0,
       interactions: 0,
       // After this number of interactions the visitor might need a nudge, some ideas
-      suggestionNeeded: 2,
+      suggestionNeeded: 7,
       poster: null,
       isSharingContentActive: false,
     };
@@ -441,6 +445,10 @@ button#sharing-button.pressed:hover {
 }
 #sharing-content.active {
   display: block;
+}
+.sharing-content p {
+  font-size: 0.8em;
+  margin-bottom: 40px;
 }
 @media only screen and (min-width: 800px) {
   .remixer-proverbios {
