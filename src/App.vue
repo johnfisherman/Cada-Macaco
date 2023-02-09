@@ -107,8 +107,15 @@ nav .navigation-items a:first-child {
   padding: 20px;
   text-align: left;
   font-family: var(--ui-font-family);
+  color: var(--main-font-color);
   text-align: left;
   font-size: 0.9em;
+}
+.running-text-section h1,
+.running-text-section h2,
+.running-text-section h3,
+.running-text-section h4 {
+  color: var(--main-font-color);
 }
 @media only screen and (min-width: 800px) {
   .running-text-section {
