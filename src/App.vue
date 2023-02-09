@@ -45,11 +45,10 @@ body {
 }
 
 a {
-  color: red;
+  color: var(--accent-color-strong);
 }
 
 nav {
-  max-width: 1200px;
   margin: 0 auto;
   background-color: var(--tertiary-color);
   display: flex;
@@ -58,8 +57,6 @@ nav {
 }
 
 nav a {
-  /* border: 1px solid teal !important; */
-  /* margin: 0 20px; */
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
@@ -100,5 +97,15 @@ nav .navigation-items a {
 }
 nav .navigation-items a:first-child {
   text-align: right;
+}
+.running-text-section {
+  max-width: 900px;
+  margin-bottom: 40px;
+  padding: 20px 40px;
+  text-align: left;
+  font-family: var(--ui-font-family);
+  text-align: left;
+  margin-left: 40px;
+  font-size: 0.9em;
 }
 </style>

@@ -149,7 +149,7 @@
       aberto a remixes e novas línguas.
     </p>
     <p>
-      Cada Macaco permite fazer um total de
+      Cada Macaco 🙊 permite fazer um total de
       <strong
         >{{
           primeirasPartes.length * primeirasPartes.length
@@ -354,7 +354,6 @@ h3 {
   font-weight: 300;
 }
 .remixer-proverbios {
-  /* border: 1px solid hotpink !important; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -370,17 +369,11 @@ h3 {
 .partes-de-proverbio button {
   background-color: var(--accent-color);
 }
-#primeiras-partes {
-  /* border: 1px solid black !important; */
-}
-#segundas-partes {
-  /* border: 1px solid palegreen !important; */
-}
 button {
   visibility: hidden;
   background: none;
   border: none;
-  border: 1px solid #4e4e4e;
+  /* border: 1px solid #4e4e4e; */
   width: 60px;
   margin: 0px 40px;
   border-radius: 4px;
@@ -460,13 +453,11 @@ button#sharing-button.pressed:hover {
     font-size: 1em;
   }
   #primeiras-partes {
-    /* border: 1px solid black !important; */
-    padding-right: 5px;
+    padding-right: 2px;
     text-align: right;
   }
   #segundas-partes {
-    /* border: 1px solid palegreen !important; */
-    padding-left: 5px;
+    padding-left: 2px;
     text-align: left;
   }
   .social-sharing img {
@@ -474,27 +465,32 @@ button#sharing-button.pressed:hover {
   }
 }
 @media only screen and (min-width: 1100px) {
+  .partes-de-proverbio {
+    width: 50%;
+  }
   .partes-de-proverbio h3 {
-    font-size: 1.4em;
-    /* border: 1px solid teal !important; */
+    font-size: 1.5em;
   }
 }
 @media only screen and (min-width: 1200px) {
   .partes-de-proverbio h3 {
-    font-size: 1.5em;
-    /* border: 1px solid lightcoral !important; */
+    font-size: 1.6em;
+  }
+  #primeiras-partes {
+    padding-right: 4px;
+  }
+  #segundas-partes {
+    padding-left: 4px;
   }
 }
 @media only screen and (min-width: 1300px) {
   .partes-de-proverbio h3 {
-    font-size: 1.6em;
-    /* border: 1px solid hotpink !important; */
+    font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 1400px) {
   .partes-de-proverbio h3 {
-    font-size: 1.7em;
-    /* border: 1px solid greenyellow !important; */
+    font-size: 2em;
   }
 }
 ul {

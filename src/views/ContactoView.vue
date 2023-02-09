@@ -1,5 +1,5 @@
 <template>
-  <div class="contacto">
+  <section class="contacto running-text-section">
     <h4>
       Tens algum provérbio a sugerir? Elogios a fazer? Encontraste a combinação
       perfeita, pronta a entrar nos cânones da Sabedoria Popular Portuguesa?
@@ -17,7 +17,7 @@
       <!-- your other form fields go here -->
       <button class="button" type="submit">Enviar</button>
     </form>
-  </div>
+  </section>
   <footer>
     <p>
       Uma experiência linguística de
@@ -45,12 +45,10 @@
 <style scoped>
 .contacto {
   text-align: left;
-  padding: 20px 40px;
 }
 form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
   font-family: var(--ui-font-family);
   font-size: 0.9em;
 }

@@ -6,7 +6,8 @@
     --secondary-color: #93BFCF;
     --tertiary-color: #BDCDD6;
     --quadri-color: #EEE9DA;
-    --accent-color: #FD8A8A;
+    --accent-color-strong: #FD8A8A;
+    --accent-color: #FECDCD;
     
     /* UI */
     --active-button-bg-color: #dedede;
