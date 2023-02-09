@@ -20,12 +20,6 @@
 @import "assets/styles/variables.css";
 
 @font-face {
-  font-family: "Castoro";
-  src: local("Castoro"),
-    url("../public/fonts/Castoro-Regular.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Alegreya SC";
   src: local("Alegreya SC"),
     url("../public/fonts/AlegreyaSC-Regular.ttf") format("truetype");
