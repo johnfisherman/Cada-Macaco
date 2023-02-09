@@ -30,7 +30,7 @@
       Cada Macaco é software Open Source <a href="https://github.com/johnfisherman/os-caes-ladram-no-seu-galho" target="_blank">código no Github</a>, aberto a remixes e novas línguas.
     </p>
     <p>
-      🎂 Parabéns, pelica!
+      🎂 Parabéns, Pelica!
     </p>
 
     <p>
