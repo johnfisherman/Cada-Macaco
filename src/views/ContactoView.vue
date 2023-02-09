@@ -77,7 +77,7 @@ form input {
 }
 form textarea {
   margin-bottom: 20px;
-  width: 100%;
+  width: 90%;
 }
 form button {
   max-width: 220px;

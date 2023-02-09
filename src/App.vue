@@ -9,8 +9,8 @@
       /></router-link>
     </div>
     <div class="navigation-items">
-      <router-link to="/contacto">Contacto</router-link>
       <router-link to="/como-assim">Como Assim?</router-link>
+      <router-link to="/contacto">Contacto</router-link>
     </div>
   </nav>
   <router-view />
@@ -73,27 +73,30 @@ nav a.router-link-exact-active {
 }
 
 nav .logo {
-  /* border: 1px solid hotpink !important; */
 }
 
 nav .logo img {
-  /* border: 1px solid blue !important; */
   width: 50px;
 }
 
 nav .navigation-items {
-  /* border: 3px solid yellow !important; */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 0 0 0;
 }
 nav .navigation-items a {
-  /* border: 3px solid red !important; */
-  min-width: 200px;
+  min-width: 120px;
+  font-size: 16px;
   text-align: left;
   padding: 0 20px;
   color: var(--brand-color);
+}
+@media only screen and (min-width: 600px) {
+  nav .navigation-items a {
+    min-width: 200px;
+    font-size: 18px;
+  }
 }
 nav .navigation-items a:first-child {
   text-align: right;
@@ -101,11 +104,15 @@ nav .navigation-items a:first-child {
 .running-text-section {
   max-width: 900px;
   margin-bottom: 40px;
-  padding: 20px 40px;
+  padding: 20px;
   text-align: left;
   font-family: var(--ui-font-family);
   text-align: left;
-  margin-left: 40px;
   font-size: 0.9em;
+}
+@media only screen and (min-width: 800px) {
+  .running-text-section {
+    padding: 20px 40px;
+  }
 }
 </style>
