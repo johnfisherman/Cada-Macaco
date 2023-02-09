@@ -25,6 +25,34 @@
     url("../public/fonts/Castoro-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Avenir LT Std";
+  src: local("Avenir LT Std"),
+    url("../public/fonts/AvenirLTStd-Black.otf") format("opentype");
+  src: local("Avenir-LT-Std"),
+    url("../public/fonts/AvenirLTStd-Black.otf") format("opentype");
+  font-style: normal;
+  font-weight: 950;
+}
+
+@font-face {
+  font-family: "Avenir LT Std";
+  src: local("Avenir LT Std"),
+    url("../public/fonts/AvenirLTStd-Medium.otf") format("opentype");
+  src: local("Avenir-LT-Std"),
+    url("../public/fonts/AvenirLTStd-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* @font-face {
+  font-family: "Avenir";
+  src: local("Avenir"),
+    url("../public/fonts/AvenirLTStd-Roman.otf") format("opentype");
+  font-style: normal;
+  font-weight: 550;
+} */
+
 body {
   background-color: var(--quadri-color);
   padding: 0;
@@ -64,6 +92,7 @@ nav a:hover {
 
 nav a.router-link-exact-active {
   color: var(--active-link-color);
+  text-decoration: underline;
 }
 
 nav .logo {
@@ -71,6 +100,10 @@ nav .logo {
 
 nav .logo img {
   width: 50px;
+}
+
+nav .logo img:hover {
+  transform: scale(1.1);
 }
 
 nav .navigation-items {
@@ -110,6 +143,7 @@ nav .navigation-items a:first-child {
 .running-text-section h3,
 .running-text-section h4 {
   color: var(--main-font-color);
+  font-weight: 950;
 }
 @media only screen and (min-width: 800px) {
   .running-text-section {
