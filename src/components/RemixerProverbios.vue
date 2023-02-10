@@ -330,7 +330,9 @@ export default {
       }
     },
     pushState() {
-      this.$router.push(`/${this.index1}/${this.index2}`);
+      const hash1 = this.hash(this.primeirasPartes[this.index1]);
+      const hash2 = this.hash(this.segundasPartes[this.index2]);
+      this.$router.push(`/${hash1}/${hash2}`);
     },
     shuffleProverbios() {
       this.index1 = Math.floor(Math.random() * this.primeirasPartes.length);
@@ -399,13 +401,25 @@ export default {
     // console.log("The component is now created.");
     await this.loadFont();
     this.poster = await this.loadImage("/card-for-sharing.jpg");
-    this.index1 = this.$route.params.primeira;
-    this.index2 = this.$route.params.segunda;
-    if (!this.index1) {
-      this.index1 = 0;
+
+    const findQuoteIndex = (hash, quoteArray) => {
+      let index = quoteArray.findIndex((value) => {
+        return hash === this.hash(value);
+      });
+      if (index < 0) {
+        index = 0;
+      }
+      return index;
+    };
+
+    const hash1 = this.$route.params.primeira;
+    if (hash1) {
+      this.index1 = findQuoteIndex(hash1, this.primeirasPartes);
     }
-    if (!this.index2) {
-      this.index2 = 0;
+
+    const hash2 = this.$route.params.segunda;
+    if (hash2) {
+      this.index2 = findQuoteIndex(hash2, this.segundasPartes);
     }
   },
 };
