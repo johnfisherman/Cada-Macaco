@@ -433,6 +433,13 @@ export default {
     if (hash2) {
       this.index2 = findQuoteIndex(hash2, this.segundasPartes);
     }
+
+    if (this.index1 < 0) {
+      this.index1 = 0;
+    }
+    if (this.index2 < 0) {
+      this.index2 = 0;
+    }
   },
 };
 </script>
