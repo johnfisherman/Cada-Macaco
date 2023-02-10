@@ -4,12 +4,7 @@
       <button
         class="button"
         :class="{ active: isFirstUpButtonVisible }"
-        v-on:click="
-          if (index1 < primeirasPartes.length - 1) {
-            index1++;
-            interactions++;
-          }
-        "
+        v-on:click="primeiraNext"
       >
         <svg
           fill="none"
@@ -31,12 +26,7 @@
       <button
         class="button"
         :class="{ active: isFirstDownButtonVisible }"
-        v-on:click="
-          if (index1 > 0) {
-            index1--;
-            interactions++;
-          }
-        "
+        v-on:click="primeiraPrevious"
       >
         <svg
           fill="none"
@@ -59,12 +49,7 @@
       <button
         class="button"
         :class="{ active: isSecondUpButtonVisible }"
-        v-on:click="
-          if (index2 < segundasPartes.length - 1) {
-            index2++;
-            interactions++;
-          }
-        "
+        v-on:click="segundaNext"
       >
         <svg
           fill="none"
@@ -86,12 +71,7 @@
       <button
         class="button"
         :class="{ active: isSecondDownButtonVisible }"
-        v-on:click="
-          if (index2 > 0) {
-            index2--;
-            interactions++;
-          }
-        "
+        v-on:click="segundaPrevious"
       >
         <svg
           fill="none"
@@ -321,6 +301,30 @@ export default {
     },
   },
   methods: {
+    primeiraNext() {
+      if (this.index1 < this.primeirasPartes.length - 1) {
+        this.index1++;
+        this.interactions++;
+      }
+    },
+    primeiraPrevious() {
+      if (this.index1 > 0) {
+        this.index1--;
+        this.interactions++;
+      }
+    },
+    segundaNext() {
+      if (this.index2 < this.segundasPartes.length - 1) {
+        this.index2++;
+        this.interactions++;
+      }
+    },
+    segundaPrevious() {
+      if (this.index2 > 0) {
+        this.index2--;
+        this.interactions++;
+      }
+    },
     shuffleProverbios() {
       this.index1 = Math.floor(Math.random() * this.primeirasPartes.length);
       this.index2 = Math.floor(Math.random() * this.segundasPartes.length);
