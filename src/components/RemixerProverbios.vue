@@ -156,7 +156,7 @@
     </p>
     <p class="social-links">
       <a class="fr-icon" href="https://fredrocha.net" target="_blank">
-        <img src="fr-logo-s.png" alt="Logo for fredrocha.net" />
+        <img src="/fr-logo-s.png" alt="Logo for fredrocha.net" />
       </a>
       <a
         class="mastodon-icon"
@@ -343,7 +343,7 @@ export default {
     },
     loadFont() {
       return new Promise((resolve) => {
-        let font = new FontFace("Castoro", `url(fonts/Castoro-Regular.ttf)`);
+        let font = new FontFace("Castoro", `url(/fonts/Castoro-Regular.ttf)`);
         font
           .load()
           .then((face) => {
@@ -380,7 +380,7 @@ export default {
   async created() {
     // console.log("The component is now created.");
     await this.loadFont();
-    this.poster = await this.loadImage("card-for-sharing.jpg");
+    this.poster = await this.loadImage("/card-for-sharing.jpg");
     this.index1 = this.$route.params.primeira;
     this.index2 = this.$route.params.segunda;
     if (!this.index1) {

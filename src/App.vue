@@ -3,7 +3,7 @@
     <div class="logo">
       <router-link to="/"
         ><img
-          src="macaco-small.png"
+          src="/macaco-small.png"
           alt="Logotipo do site - macaco com a boca tapada"
           title="Cada Macaco - Home"
       /></router-link>
@@ -22,15 +22,15 @@
 @font-face {
   font-family: "Castoro";
   src: local("Castoro"),
-    url("../public/fonts/Castoro-Regular.ttf") format("truetype");
+    url("/public/fonts/Castoro-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Avenir LT Std";
   src: local("Avenir LT Std"),
-    url("../public/fonts/AvenirLTStd-Black.otf") format("opentype");
+    url("/public/fonts/AvenirLTStd-Black.otf") format("opentype");
   src: local("Avenir-LT-Std"),
-    url("../public/fonts/AvenirLTStd-Black.otf") format("opentype");
+    url("/public/fonts/AvenirLTStd-Black.otf") format("opentype");
   font-style: normal;
   font-weight: 950;
 }
@@ -38,9 +38,9 @@
 @font-face {
   font-family: "Avenir LT Std";
   src: local("Avenir LT Std"),
-    url("../public/fonts/AvenirLTStd-Medium.otf") format("opentype");
+    url("/public/fonts/AvenirLTStd-Medium.otf") format("opentype");
   src: local("Avenir-LT-Std"),
-    url("../public/fonts/AvenirLTStd-Medium.otf") format("opentype");
+    url("/public/fonts/AvenirLTStd-Medium.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
 }
@@ -48,7 +48,7 @@
 /* @font-face {
   font-family: "Avenir";
   src: local("Avenir"),
-    url("../public/fonts/AvenirLTStd-Roman.otf") format("opentype");
+    url("/public/fonts/AvenirLTStd-Roman.otf") format("opentype");
   font-style: normal;
   font-weight: 550;
 } */
