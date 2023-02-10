@@ -384,6 +384,16 @@ export default {
       context.fillText("criado em https://cadamaca.co", 650, 800);
       return canvas.toDataURL("image/jpeg");
     },
+    hash(value) {
+      // From https://stackoverflow.com/a/33647870
+      let hash = 0,
+        i = 0,
+        len = value.length;
+      while (i < len) {
+        hash = ((hash << 5) - hash + value.charCodeAt(i++)) << 0;
+      }
+      return `${hash + 2147483647 + 1}`;
+    },
   },
   async created() {
     // console.log("The component is now created.");
