@@ -268,8 +268,8 @@ export default {
         "sai caro",
         "meia palavra basta.",
       ],
-      index1: 0,
-      index2: 0,
+      index1: -1,
+      index2: -1,
       interactions: 0,
       // After this number of interactions the visitor might need a nudge, some ideas
       suggestionNeeded: 7,
@@ -300,9 +300,15 @@ export default {
       return this.interactions > 0;
     },
     primeiraParte() {
+      if (this.index1 < 0) {
+        return "";
+      }
       return this.primeirasPartes[this.index1];
     },
     segundaParte() {
+      if (this.index2 < 0) {
+        return "";
+      }
       return this.segundasPartes[this.index2];
     },
   },
