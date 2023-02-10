@@ -22,9 +22,7 @@ Se quiseres enviar uma palavra está aberto o contacto aqui.
 
 
 
-### LI
-
-
+### Explicação curta
 
 Cada Macaco é um fresquíssimo projecto open source que recicla provérbios clássicos para lhes dar nova vida. 
 
