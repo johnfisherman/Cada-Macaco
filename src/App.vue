@@ -150,7 +150,8 @@ nav .navigation-items a:first-child {
     padding: 20px 40px;
   }
 }
-footer .social-links svg:hover {
+footer .social-links svg:hover,
+footer .social-links img:hover {
   transform: scale(1.1);
   transition: all ease-in-out 0.1s;
 }
@@ -168,5 +169,10 @@ footer .social-links .github-icon svg {
 footer .social-links .mastodon-icon svg {
   width: 40px;
   height: 40px;
+}
+footer .social-links .fr-icon img {
+  width: 27px;
+  padding-bottom: 12px;
+  margin-right: 15px;
 }
 </style>
