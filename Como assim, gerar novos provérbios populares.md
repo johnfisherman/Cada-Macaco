@@ -17,3 +17,25 @@ Se quiseres enviar uma palavra está aberto o contacto aqui.
 :birthday: Parabéns, pelica!
 
 :banana:
+
+
+
+
+
+### LI
+
+
+
+Cada Macaco é um fresquíssimo projecto open source que recicla provérbios clássicos para lhes dar nova vida. 
+
+
+
+Esta ideia já andava por cá há muito tempo, mas ter encontrado um certo objecto na casa de uns amigos fez-me perceber que era para fazer. Fazia falta. 
+
+
+
+Aproveitei para aprender uma tecnologia nova (Vue.js) para finalmente rockar aplicações single page.
+
+
+
+Juntou-se a fome à vontade de comer.
