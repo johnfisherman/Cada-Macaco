@@ -305,29 +305,37 @@ export default {
       if (this.index1 < this.primeirasPartes.length - 1) {
         this.index1++;
         this.interactions++;
+        this.pushState();
       }
     },
     primeiraPrevious() {
       if (this.index1 > 0) {
         this.index1--;
         this.interactions++;
+        this.pushState();
       }
     },
     segundaNext() {
       if (this.index2 < this.segundasPartes.length - 1) {
         this.index2++;
         this.interactions++;
+        this.pushState();
       }
     },
     segundaPrevious() {
       if (this.index2 > 0) {
         this.index2--;
         this.interactions++;
+        this.pushState();
       }
+    },
+    pushState() {
+      this.$router.push(`/${this.index1}/${this.index2}`);
     },
     shuffleProverbios() {
       this.index1 = Math.floor(Math.random() * this.primeirasPartes.length);
       this.index2 = Math.floor(Math.random() * this.segundasPartes.length);
+      this.pushState();
       return true;
     },
     loadImage(url) {
