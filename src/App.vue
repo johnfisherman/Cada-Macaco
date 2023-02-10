@@ -150,4 +150,23 @@ nav .navigation-items a:first-child {
     padding: 20px 40px;
   }
 }
+footer .social-links svg:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.1s;
+}
+footer .social-links .mastodon-icon path {
+  fill: slateblue;
+}
+footer .social-links .github-icon path {
+  fill: black;
+}
+footer .social-links .github-icon svg {
+  width: 28px;
+  height: 28px;
+  padding-bottom: 11px;
+}
+footer .social-links .mastodon-icon svg {
+  width: 40px;
+  height: 40px;
+}
 </style>
