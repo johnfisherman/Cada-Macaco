@@ -17,6 +17,8 @@ Juntou-se a fome à vontade de comer.
 Adorava que este projecto fosse replicado noutras línguas. Ainda falta desbravar algum caminho na
 área do i18n, mas estou pronto a fazê-lo. Se estiveres interessado diz coisas.
 
+---
+
 Outros projectos e ideias em [fredrocha.net](https://fredrocha.net).
 
 ## Project setup

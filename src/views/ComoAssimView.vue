@@ -27,7 +27,7 @@
       Se quiseres enviar feedback ou entrar em contacto, tens <a href="/contacto">esta página de contacto</a> para o fazer.
     </p>
     <p>
-      Cada Macaco é software Open Source <a href="https://github.com/johnfisherman/os-caes-ladram-no-seu-galho" target="_blank">código no Github</a>, aberto a remixes e novas línguas.
+      Cada Macaco é software Open Source <a href="https://github.com/johnfisherman/Cada-Macaco" target="_blank">código no Github</a>, aberto a remixes e novas línguas.
     </p>
     <p>
       🎂 Parabéns, Pelica!
@@ -45,7 +45,7 @@
       <a href="https://madalenamarques.com" target="_blank">Madalena Marques</a
       >.
       <a
-        href="https://github.com/johnfisherman/os-caes-ladram-no-seu-galho"
+        href="https://github.com/johnfisherman/Cada-Macaco"
         target="_blank"
         >Código aberto</a
       >

@@ -145,9 +145,7 @@
       <a href="https://fredrocha.net">Fred Rocha</a> com a inspiração de
       <a href="https://madalenamarques.com" target="_blank">Madalena Marques</a
       >.
-      <a
-        href="https://github.com/johnfisherman/os-caes-ladram-no-seu-galho"
-        target="_blank"
+      <a href="https://github.com/johnfisherman/Cada-Macaco" target="_blank"
         >Código aberto</a
       >
       aberto a remixes e novas línguas.
