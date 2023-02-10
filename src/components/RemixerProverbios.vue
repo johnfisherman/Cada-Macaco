@@ -381,6 +381,14 @@ export default {
     // console.log("The component is now created.");
     await this.loadFont();
     this.poster = await this.loadImage("card-for-sharing.jpg");
+    this.index1 = this.$route.params.primeira;
+    this.index2 = this.$route.params.segunda;
+    if (!this.index1) {
+      this.index1 = 0;
+    }
+    if (!this.index2) {
+      this.index2 = 0;
+    }
   },
 };
 </script>
