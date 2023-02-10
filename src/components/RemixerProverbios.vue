@@ -22,7 +22,7 @@
           />
         </svg>
       </button>
-      <h3>{{ primeirasPartes[index1] }}</h3>
+      <h3>{{ primeiraParte }}</h3>
       <button
         class="button"
         :class="{ active: isFirstDownButtonVisible }"
@@ -67,7 +67,7 @@
           />
         </svg>
       </button>
-      <h3>{{ segundasPartes[index2] }}</h3>
+      <h3>{{ segundaParte }}</h3>
       <button
         class="button"
         :class="{ active: isSecondDownButtonVisible }"
@@ -298,6 +298,12 @@ export default {
     },
     isSharingButtonButtonActive() {
       return this.interactions > 0;
+    },
+    primeiraParte() {
+      return this.primeirasPartes[this.index1];
+    },
+    segundaParte() {
+      return this.segundasPartes[this.index2];
     },
   },
   methods: {
