@@ -15,7 +15,7 @@
     </p>
     <h1>Eish, e como te lembraste disto?</h1>
     <p>
-      Durante o período Natalício de 2022 dois bons amigos ofereceram-nos a casa para passar uns dias, no centro de Lisboa. Entre muitas pérolas de tipografia, arquitectura e design estava um jogo em papel que permitia criar animais fabulosos alternando uma das suas três partes; traseira, tronco, cabeça. Os nomes destas bestas fantásticas também era composto por três partes, o que faz com que cada animal criado tenha também um nome inusitado. É um projecto bem mais complexo e sofisticado que o Cada Macaco, mas deu-me a ideia de transformar aquela velha brincadeira de misturar provérbios (mas que nunca passava do &quot;grão a grão não faz o monge, ah ah!&quot;) em algo mais poderoso e abrangente. Eis-nos aqui chegados.
+      Durante o período Natalício de 2022 dois bons amigos ofereceram-nos a casa para passar uns dias, no centro de Lisboa. Entre muitas pérolas de tipografia, arquitectura e design estava <a href="https://www.orfeunegro.org/products/animalario-universal-do-professor-revillod-1" target="_blank"> o livro-objecto "Animalário Universal do Professor Revillod - Fabuloso Almanaque da Fauna Mundial"</a> que permitia criar animais fabulosos alternando uma das suas três partes; traseira, tronco, cabeça. Os nomes destas bestas fantásticas também era composto por três partes, o que faz com que cada animal criado tenha também um nome inusitado. É um projecto bem mais complexo e sofisticado que o Cada Macaco, mas deu-me a ideia de transformar aquela velha brincadeira de misturar provérbios (mas que nunca passava do &quot;grão a grão não faz o monge, ah ah!&quot;) em algo mais poderoso e abrangente. Eis-nos aqui chegados.
     </p>
     <p>
       Esta aplicação foi lançada no dia 9 de Fevereiro de 2023. Dia do aniversário do Eng. João Rocha, que sempre nos aportou a casa sabedoria e humor em forma de piadas curtas, chalaças, expressões e sabedoria popular, alguma dela herdada da sua mãe e minha avó, Rita. &quot;Engana a criança, chupa-lhe o pão&quot;, respondia esta ao meu pai quando a versão infantil dele lhe pedia um brinquedo ou uma bola para jogar futebol. Já nesta altura a minha avó estava de olho aberto para o implacável marketing infantil.
@@ -36,6 +36,12 @@
     <p>
       🍌
     </p>
+
+    <h1>A César o que é de César</h1>
+
+    <p>Vue.js</p>
+    <p>Gerador de imagem</p>
+    <p>Palete via colorhunt.co</p>
 
   </section>
    <footer>
