@@ -75,7 +75,7 @@
     </p>
     <p class="social-links">
       <a class="fr-icon" href="https://fredrocha.net" target="_blank">
-        <img src="fr-logo-s.png" alt="Logo for fredrocha.net" />
+        <img src="/fr-logo-s.png" alt="Logo for fredrocha.net" />
       </a>
       <a
         class="mastodon-icon"

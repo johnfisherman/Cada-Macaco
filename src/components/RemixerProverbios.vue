@@ -4,12 +4,7 @@
       <button
         class="button"
         :class="{ active: isFirstUpButtonVisible }"
-        v-on:click="
-          if (index1 < primeirasPartes.length - 1) {
-            index1++;
-            interactions++;
-          }
-        "
+        v-on:click="primeiraNext"
       >
         <svg
           fill="none"
@@ -27,16 +22,11 @@
           />
         </svg>
       </button>
-      <h3>{{ primeirasPartes[index1] }}</h3>
+      <h3>{{ primeiraParte }}</h3>
       <button
         class="button"
         :class="{ active: isFirstDownButtonVisible }"
-        v-on:click="
-          if (index1 > 0) {
-            index1--;
-            interactions++;
-          }
-        "
+        v-on:click="primeiraPrevious"
       >
         <svg
           fill="none"
@@ -59,12 +49,7 @@
       <button
         class="button"
         :class="{ active: isSecondUpButtonVisible }"
-        v-on:click="
-          if (index2 < segundasPartes.length - 1) {
-            index2++;
-            interactions++;
-          }
-        "
+        v-on:click="segundaNext"
       >
         <svg
           fill="none"
@@ -82,16 +67,11 @@
           />
         </svg>
       </button>
-      <h3>{{ segundasPartes[index2] }}</h3>
+      <h3>{{ segundaParte }}</h3>
       <button
         class="button"
         :class="{ active: isSecondDownButtonVisible }"
-        v-on:click="
-          if (index2 > 0) {
-            index2--;
-            interactions++;
-          }
-        "
+        v-on:click="segundaPrevious"
       >
         <svg
           fill="none"
@@ -176,7 +156,7 @@
     </p>
     <p class="social-links">
       <a class="fr-icon" href="https://fredrocha.net" target="_blank">
-        <img src="fr-logo-s.png" alt="Logo for fredrocha.net" />
+        <img src="/fr-logo-s.png" alt="Logo for fredrocha.net" />
       </a>
       <a
         class="mastodon-icon"
@@ -288,8 +268,8 @@ export default {
         "sai caro",
         "meia palavra basta.",
       ],
-      index1: 0,
-      index2: 0,
+      index1: -1,
+      index2: -1,
       interactions: 0,
       // After this number of interactions the visitor might need a nudge, some ideas
       suggestionNeeded: 7,
@@ -319,11 +299,57 @@ export default {
     isSharingButtonButtonActive() {
       return this.interactions > 0;
     },
+    primeiraParte() {
+      if (this.index1 < 0) {
+        return "";
+      }
+      return this.primeirasPartes[this.index1];
+    },
+    segundaParte() {
+      if (this.index2 < 0) {
+        return "";
+      }
+      return this.segundasPartes[this.index2];
+    },
   },
   methods: {
+    primeiraNext() {
+      if (this.index1 < this.primeirasPartes.length - 1) {
+        this.index1++;
+        this.interactions++;
+        this.pushState();
+      }
+    },
+    primeiraPrevious() {
+      if (this.index1 > 0) {
+        this.index1--;
+        this.interactions++;
+        this.pushState();
+      }
+    },
+    segundaNext() {
+      if (this.index2 < this.segundasPartes.length - 1) {
+        this.index2++;
+        this.interactions++;
+        this.pushState();
+      }
+    },
+    segundaPrevious() {
+      if (this.index2 > 0) {
+        this.index2--;
+        this.interactions++;
+        this.pushState();
+      }
+    },
+    pushState() {
+      const hash1 = this.hash(this.primeirasPartes[this.index1]);
+      const hash2 = this.hash(this.segundasPartes[this.index2]);
+      this.$router.push(`/${hash1}/${hash2}`);
+    },
     shuffleProverbios() {
       this.index1 = Math.floor(Math.random() * this.primeirasPartes.length);
       this.index2 = Math.floor(Math.random() * this.segundasPartes.length);
+      this.pushState();
       return true;
     },
     loadImage(url) {
@@ -339,7 +365,7 @@ export default {
     },
     loadFont() {
       return new Promise((resolve) => {
-        let font = new FontFace("Castoro", `url(fonts/Castoro-Regular.ttf)`);
+        let font = new FontFace("Castoro", `url(/fonts/Castoro-Regular.ttf)`);
         font
           .load()
           .then((face) => {
@@ -372,11 +398,48 @@ export default {
       context.fillText("criado em https://cadamaca.co", 650, 800);
       return canvas.toDataURL("image/jpeg");
     },
+    hash(value) {
+      // From https://stackoverflow.com/a/33647870
+      let hash = 0,
+        i = 0,
+        len = value.length;
+      while (i < len) {
+        hash = ((hash << 5) - hash + value.charCodeAt(i++)) << 0;
+      }
+      return `${hash + 2147483647 + 1}`;
+    },
   },
   async created() {
     // console.log("The component is now created.");
     await this.loadFont();
-    this.poster = await this.loadImage("card-for-sharing.jpg");
+    this.poster = await this.loadImage("/card-for-sharing.jpg");
+
+    const findQuoteIndex = (hash, quoteArray) => {
+      let index = quoteArray.findIndex((value) => {
+        return hash === this.hash(value);
+      });
+      if (index < 0) {
+        index = 0;
+      }
+      return index;
+    };
+
+    const hash1 = this.$route.params.primeira;
+    if (hash1) {
+      this.index1 = findQuoteIndex(hash1, this.primeirasPartes);
+    }
+
+    const hash2 = this.$route.params.segunda;
+    if (hash2) {
+      this.index2 = findQuoteIndex(hash2, this.segundasPartes);
+    }
+
+    if (this.index1 < 0) {
+      this.index1 = 0;
+    }
+    if (this.index2 < 0) {
+      this.index2 = 0;
+    }
   },
 };
 </script>
