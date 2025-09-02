@@ -4,62 +4,123 @@
     <h1>Como assim, provérbios novos?</h1>
 
     <p>
-      É verdade, Cada Macaco permite-te criar as tuas próprias pérolas de sabedoria. Ou de humor. Dois bons provérbios — quando combinados — podem dar uma boa piada. Do antigo surge o novo, em todas as suas múltiplas possibilidades.
+      É verdade, Cada Macaco permite-te criar as tuas próprias pérolas de
+      sabedoria. Ou de humor. Dois bons provérbios — quando combinados — podem
+      dar uma boa piada. Do antigo surge o novo, em todas as suas múltiplas
+      possibilidades.
     </p>
-      
+
     <p>
-      Começa por ir mudando as primeiras e segundas partes, ao teu ritmo. Se encontrares uma pérola partilha com aquele amigo das chalaças na carteira da escola ou da cerveja de fim de tarde. Manda-lhe o texto ou a imagem que é gerada. Inclui o link <a href='https://cadamaca.co' target='_blank' class='url'>cadamaca.co</a> para que também el@ se possa entreter.
+      Começa por ir mudando as primeiras e segundas partes, ao teu ritmo. Se
+      encontrares uma pérola partilha com aquele amigo das chalaças na carteira
+      da escola ou da cerveja de fim de tarde. Manda-lhe o texto ou a imagem que
+      é gerada. Inclui o link
+      <a href="https://cadamaca.co" target="_blank" class="url">cadamaca.co</a>
+      para que também el@ se possa entreter.
     </p>
     <p>
-      Quando estiveres sem ideias, experimenta o botão aleatório 🎲. Todo um mundo de possibilidades — ora abstratas, ora hilariantes, ora com a profundidade de um haiku — se abre perante ti.
+      Quando estiveres sem ideias, experimenta o botão aleatório 🎲. Todo um
+      mundo de possibilidades — ora abstratas, ora hilariantes, ora com a
+      profundidade de um haiku — se abre perante ti.
     </p>
     <h1>Eish, e como te lembraste disto?</h1>
     <p>
-      Durante o período Natalício de 2022 dois bons amigos ofereceram-nos a casa para passar uns dias, no centro de Lisboa. Entre muitas pérolas de tipografia, arquitectura e design estava <a href="https://www.orfeunegro.org/products/animalario-universal-do-professor-revillod-1" target="_blank"> o livro-objecto "Animalário Universal do Professor Revillod - Fabuloso Almanaque da Fauna Mundial"</a> que permitia criar animais fabulosos alternando uma das suas três partes; traseira, tronco, cabeça. Os nomes destas bestas fantásticas também eram compostos por três partes, o que faz com que cada animal criado tenha também um nome inusitado.
+      Durante o período Natalício de 2022 dois bons amigos ofereceram-nos a casa
+      para passar uns dias, no centro de Lisboa. Entre muitas pérolas de
+      tipografia, arquitectura e design estava
+      <a
+        href="https://www.orfeunegro.org/products/animalario-universal-do-professor-revillod-1"
+        target="_blank"
+      >
+        o livro-objecto "Animalário Universal do Professor Revillod - Fabuloso
+        Almanaque da Fauna Mundial"</a
+      >
+      que permitia criar animais fabulosos alternando uma das suas três partes;
+      traseira, tronco, cabeça. Os nomes destas bestas fantásticas também eram
+      compostos por três partes, o que faz com que cada animal criado tenha
+      também um nome inusitado.
     </p>
     <p>
-      <img src="Animalario-Universal-do-Professor Revillod.jpg" alt="Uma besta imaginária composta por partes de 3 bestas diferentes, e chamada Tigadoguru.">
-    </p>
-    <p>É um projecto bem mais complexo e sofisticado que o Cada Macaco, mas deu-me a ideia de transformar aquela velha brincadeira de misturar provérbios (mas que nunca passava do &quot;grão a grão não faz o monge, ah ah!&quot;) em algo mais poderoso e abrangente. Eis-nos aqui chegados.
-    </p>
-    <p>
-      Esta aplicação foi lançada no dia 9 de Fevereiro de 2023. Dia do aniversário do Eng. João Rocha, que sempre nos aportou a casa sabedoria e humor em forma de piadas curtas, chalaças, expressões e sabedoria popular, alguma dela herdada da sua mãe e minha avó, Rita. &quot;Engana a criança, chupa-lhe o pão&quot;, respondia esta ao meu pai quando a versão infantil dele lhe pedia um brinquedo ou uma bola para jogar futebol. Já nesta altura a minha avó estava de olho aberto para o implacável marketing infantil.
+      <img
+        src="Animalario-Universal-do-Professor Revillod.jpg"
+        alt="Uma besta imaginária composta por partes de 3 bestas diferentes, e chamada Tigadoguru."
+      />
     </p>
     <p>
-      Não surpreende, assim, que eu também tenha uma paixão por sabedoria &quot;popular&quot;, trocadilhos e ideias novas. Está-me nos genes. Dito isto, os provérbios originais que aqui encontras são uma compilação da minha curadoria, os que gosto mesmo. É pessoal. Obrigado ao Pedro Santos e à família Rocha e à Madalena Marques pela contribuição com pérolas da sabedoria popular.</p><p>Para ver outros projectos e textos criados por mim dá um salto até <a href='https://fredrocha.net' target='_blank' class='url'>fredrocha.net</a>. Há muito para ver, e mais haverá. :)
+      É um projecto bem mais complexo e sofisticado que o Cada Macaco, mas
+      deu-me a ideia de transformar aquela velha brincadeira de misturar
+      provérbios (mas que nunca passava do &quot;grão a grão não faz o monge, ah
+      ah!&quot;) em algo mais poderoso e abrangente. Eis-nos aqui chegados.
     </p>
     <p>
-      Se quiseres enviar feedback ou entrar em contacto, tens <a href="/contacto">esta página de contacto</a> para o fazer.
+      Esta aplicação foi lançada no dia 9 de Fevereiro de 2023. Dia do
+      aniversário do Eng. João Rocha, que sempre nos aportou a casa sabedoria e
+      humor em forma de piadas curtas, chalaças, expressões e sabedoria popular,
+      alguma dela herdada da sua mãe e minha avó, Rita. &quot;Engana a criança,
+      chupa-lhe o pão&quot;, respondia esta ao meu pai quando a versão infantil
+      dele lhe pedia um brinquedo ou uma bola para jogar futebol. Já nesta
+      altura a minha avó estava de olho aberto para o implacável marketing
+      infantil.
     </p>
     <p>
-      Cada Macaco é software Open Source <a href="https://github.com/johnfisherman/Cada-Macaco" target="_blank">código no Github</a>, aberto a remixes e novas línguas.
+      Não surpreende, assim, que eu também tenha uma paixão por sabedoria
+      &quot;popular&quot;, trocadilhos e ideias novas. Está-me nos genes. Dito
+      isto, os provérbios originais que aqui encontras são uma compilação da
+      minha curadoria, os que gosto mesmo. É pessoal. Obrigado ao Pedro Santos e
+      à família Rocha e à Madalena Marques pela contribuição com pérolas da
+      sabedoria popular.
     </p>
     <p>
-      🎂 Parabéns, Pelica!
+      Para ver outros projectos e textos criados por mim dá um salto até
+      <a href="https://fredrocha.net" target="_blank" class="url"
+        >fredrocha.net</a
+      >. Há muito para ver, e mais haverá. :)
     </p>
+    <p>
+      Se quiseres enviar feedback ou entrar em contacto, tens
+      <a href="/contacto">esta página de contacto</a> para o fazer.
+    </p>
+    <p>
+      Cada Macaco é software Open Source
+      <a href="https://github.com/johnfisherman/Cada-Macaco" target="_blank"
+        >código no Github</a
+      >, aberto a remixes e novas línguas.
+    </p>
+    <p>🎂 Parabéns, Pelica!</p>
 
-    <p>
-      🍌
-    </p>
+    <p>🍌</p>
 
     <h1>A César o que é de César</h1>
 
-    <p>Subi aos ombros de alguns gigantes para completar este proecto. Eis alguns:</p>
+    <p>
+      Subi aos ombros de alguns gigantes para completar este projecto. Eis
+      alguns:
+    </p>
 
-    <p><a href="https://vuejs.org/" target="_blank">Vue.js, framework de javascript</a>.</p>
-    <p><a href="https://uxdesign.cc/the-sharing-part-1-generating-and-sharing-dynamic-images-on-the-web-d43dace87802" target="_blank">Como gerar imagens usando HTML canvas</a>, do Lee Martin.</p>
-    <p>Escolha de cores com a ajuda do <a href="https://colorhunt.co/">colorhunt.co</a>.</p>
-    
+    <p>
+      <a href="https://vuejs.org/" target="_blank"
+        >Vue.js, framework de javascript</a
+      >.
+    </p>
+    <p>
+      <a
+        href="https://uxdesign.cc/the-sharing-part-1-generating-and-sharing-dynamic-images-on-the-web-d43dace87802"
+        target="_blank"
+        >Como gerar imagens usando HTML canvas</a
+      >, do Lee Martin.
+    </p>
+    <p>
+      Escolha de cores com a ajuda do
+      <a href="https://colorhunt.co/">colorhunt.co</a>.
+    </p>
   </section>
-   <footer>
+  <footer>
     <p>
       Uma experiência linguística de
       <a href="https://fredrocha.net">Fred Rocha</a> com a inspiração de
       <a href="https://madalenamarques.com" target="_blank">Madalena Marques</a
       >.
-      <a
-        href="https://github.com/johnfisherman/Cada-Macaco"
-        target="_blank"
+      <a href="https://github.com/johnfisherman/Cada-Macaco" target="_blank"
         >Código aberto</a
       >
       aberto a remixes e novas línguas.
